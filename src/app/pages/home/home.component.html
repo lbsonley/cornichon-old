@@ -1,0 +1,79 @@
+<main class="container-fluid">
+  <section class="row">
+    <div class="col-xs-12 col-md-10 col-lg-8">
+      <p>Cornichon is a tool to help project teams generate Gherkins.</p>
+
+      <h2>What is a Gerkin?</h2>
+      
+      <p>
+        In Behavior Driven Development, A Gherkin is the specification of an individual requirement
+        for a product feature.
+      </p>
+      <p>
+        A Gherkin could also be described as a scenario. In fact, the first
+        step in creating a Gherkin is to define it's <strong>Scenario</strong>. The scenario 
+        introduces a situation in which the application should perform action or react to user input.
+        The exact behavior of the application for this scenario is written using predefined keywords. Like this:
+      </p>
+
+      <p>
+        <strong>Given</strong> condition or state of the application or user,<br/>
+        <strong>When</strong> an action is performed on the application,<br/>
+        <strong>Then</strong> the following outcomes will result.
+      </p>
+
+      <p>The combination of a Scenario defined by a Given, When and Then statement is known as a Gherkin.</p>
+    </div>
+  </section>
+
+  <section class="row">
+    <div class="col-xs-12">
+      <h2>Making a Gerkin</h2>
+
+      <p>
+        Let's imagine we are building an application that allows users to keep a list of contacts with
+        email addresses and phone numbers. As a very first step, we need to define what will happen when
+        a user adds a contact to their contact list. Let's write this as the scenario.
+      </p>
+
+      <p><strong>Scenario:</strong> A user adds a new contact to their contact list.</p>
+
+      <p>
+        So far so good. Next can we define some pre-conditions that are necessary in order for
+        the scenario to take place? Doing this helps us be sure we are not making assumptions about
+        any number of factors that might influence the outcomes of the following action.
+      </p>
+      <p>
+        For example, we might assume the user has an existing contact list, or that 
+        the contact the user is attempting to add does not already exist.
+        How might this affect the outcome of a user adding a contact to their contact list?
+        Often, they resulting behavior should be completely different in each of those scenarios.
+        And will, as a result, likely require their own complete Given, When, Then Scenario.
+        We'll come back to that later. For now let's specify our assumptions in a
+        <strong>Given</strong> statement.
+      </p>
+
+      <p><strong>Given</strong> A logged in user with at least one existing contact list.</p>
+
+      <p>The <strong>When</strong> statement defines the action that takes place.</p>
+
+      <p>
+        <strong>When</strong> The user enters at least the minimum required information
+        for a contact whose name does not already exist in the contact list and clicks the add user button.
+      </p>
+
+      <p>What should happen? This statement will become the assertions</p>
+
+      <p>
+        <strong>Then</strong> the length of the contact list should increase by 1<br/>
+        <strong>Then</strong> the newly created user should be present on the list.<br/>
+      </p>
+
+      <p>
+        Notice that there are two Then statements above. A single Scenario can
+        have multiple Then's, as well as multiple Given's, but usually only one When.
+        However, use discretion with multiple Given's and Then's this leads to better tests.
+      </p>
+    </div>
+  </section>
+</main>

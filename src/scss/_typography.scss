@@ -1,0 +1,30 @@
+@import '~src/scss/variables';
+@import './mixins';
+
+html {
+  font-family: sans-serif; 
+}
+
+h1,
+h2 {
+  color: $color-green-light;
+}
+
+@include breakpointSmall {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+
+  @include breakpointSmall() {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,21 @@
+$small: 48em;
+$medium: 64em;
+$large: 75em;
+
+@mixin breakpointSmall {
+  @media (min-width: #{$small}) {
+    @content;
+  }
+}
+
+@mixin breakpointMedium {
+  @media (min-width: #{$medium}) {
+    @content;
+  }
+}
+
+@mixin breakpointLarge {
+  @media (min-width: #{$large}) {
+    @content;
+  }
+}

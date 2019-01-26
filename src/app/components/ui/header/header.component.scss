@@ -1,0 +1,9 @@
+@import '~src/scss/variables';
+
+header {
+  border-bottom: $default-border;
+}
+
+.page-title {
+  color: $color-green-light;
+}

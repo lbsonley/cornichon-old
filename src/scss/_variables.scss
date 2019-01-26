@@ -1,0 +1,14 @@
+// color
+$color-green: #556e3c;
+$color-green-dark: darken($color-green, 10%);
+$color-green-light: lighten($color-green, 10%);
+$color-black: #141414;
+$color-grey: #808080;
+$color-grey-dark: darken(#808080, 10%);
+$color-grey-light: lighten(#808080, 10%);
+$color-yellow: #ffcc66;
+$color-yellow-dark: darken(#ffcc66, 10%);
+$color-yellow-light: lighten(#ffcc66, 10%);
+
+// border
+$default-border: 1px solid $color-grey-light;
