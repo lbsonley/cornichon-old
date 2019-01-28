@@ -1,4 +1,4 @@
-@import '~src/scss/variables';
+
 @import './mixins';
 
 html {
@@ -23,8 +23,4 @@ h2 {
 p {
   font-size: 16px;
   line-height: 1.6;
-
-  @include breakpointSmall() {
-    font-size: 20px;
-  }
 }

@@ -1,4 +1,5 @@
 @import '~src/scss/variables';
+@import '~src/scss/mixins';
 
 header {
   border-bottom: $border-default;
@@ -12,27 +13,25 @@ header {
 
   nav {
     display: flex;
-    flex-flow: row-reverse nowrap;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
     align-items: stretch;
 
-    a {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      padding: 0 16px;
-      color: $color-green-light;
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
+    .nav-link {
+      @include navLink();
 
-      &.active {
-        border-bottom: $border-color;
-      }
+      &.nav-link-horizontal {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        padding: 0 16px;
+        margin: 0 16px;
+        border-bottom: 1px solid transparent;
 
-      &:visited {
-        color: $color-green-light;
-      }
-      &:hover {
-        color: $color-green-dark;
+        &.active {
+          border-bottom: $border-active-link;
+        }
+
       }
     }
   }

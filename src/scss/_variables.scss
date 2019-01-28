@@ -10,6 +10,13 @@ $color-yellow: #ffcc66;
 $color-yellow-dark: darken(#ffcc66, 10%);
 $color-yellow-light: lighten(#ffcc66, 10%);
 
+$color-button-primary: $color-green-light;
+$color-button-primary-hover: $color-green;
+$color-button-secondary: $color-grey-dark;
+$color-button-secondary-hover: $color-grey;
+
 // border
 $border-default: 1px solid $color-grey-light;
-$border-color: 1px solid $color-green-dark;
+$border-active-link: 2px solid $color-green-dark;
+$border-button-primary: 1px solid $color-button-primary;
+$border-button-secondary: 1px solid $color-button-secondary;

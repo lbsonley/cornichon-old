@@ -1,0 +1,16 @@
+@import '~src/scss/mixins';
+
+nav {
+  .nav-link {
+    @include navLink();
+
+    &.nav-link-vertical {
+      display: block;
+      padding: 16px 32px;
+
+      &.active {
+        border-right: $border-active-link;
+      }
+    }
+  }
+}

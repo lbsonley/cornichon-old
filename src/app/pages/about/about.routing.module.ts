@@ -11,7 +11,7 @@ const aboutRoutes: Routes = [
     children: [
       {
         path: '',
-        component: WhatGherkinComponent,
+        component: WhatGherkinComponent
       },
       {
         path: 'make-gherkin',

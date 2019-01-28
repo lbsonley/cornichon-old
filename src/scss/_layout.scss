@@ -1,0 +1,35 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.container-layout {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.container-content-main {
+  margin-bottom: 40px;
+}
+
+.container-layout-default {
+  .container-content-main {
+    flex: 1 0 100%;
+  }  
+}
+
+.container-layout-sidebar {
+  .container-content-sidebar {
+    flex: 0 1 25%;
+    display: flex;
+    flex-flow: column nowrap;
+    border-right: $border-default;
+    height: 100%;
+    overflow-y: scroll;
+  }
+  
+  .container-content-main {
+    flex: 3 0 75%;
+  }  
+}

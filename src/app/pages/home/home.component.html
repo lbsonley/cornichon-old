@@ -1,9 +1,37 @@
-<main class="container-fluid">
-  <section class="row">
-    <div class="col-xs-12 col-md-10 col-lg-8">
-      <p>Cornichon is a tool to help project teams generate Gherkins.</p>
-
-      <app-what-gherkin></app-what-gherkin>
-    </div>
-  </section>
-</main>
+<div class="container-layout container-layout-default">
+  <main class="container-content-main container-fluid">
+    <section class="row">
+      <div class="col-xs-12 col-md-10 col-lg-8">
+        <p>
+          Cornichon is a tool to help project teams generate BDD-style feature
+          specifications.
+        </p>
+        <h3>What is BDD?</h3>
+        <p>
+          BDD stands for Behavior Driven Development.
+          In BDD, the requirements of a product feature are specified by defining scenarios which 
+          represent specific use cases. Each scenario is constructed using predefined keywords: Given, When, Then.
+          The goal of BDD is to write technical specifications for product behavior in plain English. After a feature's
+          specifications have been written, the same language is used to write acceptance tests. With the tests
+          in place, Developers write their code to satisfy the tests and reports are generated which reflect
+          the state of the feature.
+        </p>
+        <h3>What are the benefits of BDD?</h3>
+        <p>
+          What you end up with, are automated acceptance tests which use the exact same language as the specification.
+          Non-technical stakeholders can be confident that their requirements are met when the test reports,
+          which use the same language as the specification, are green. Technical stakeholders have living
+          documentation in the form of automated test specifications.
+        </p>
+        <p>
+          As requirements evolve, new scenarios can be added, existing scenarios can be updated, and outdated
+          scenarios can be deleted. The necessary changes to the code base are then made in order to make the
+          tests pass. Stakeholders remain confident that the new features have been implemented without
+          breaking existing functionality, and developers don't need to worry about updating documentation
+          after implementation.
+        </p>
+        <button class="btn btn-primary" routerLink="about">Learn More</button>
+      </div>
+    </section>
+  </main>
+</div>

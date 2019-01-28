@@ -1,3 +1,5 @@
+@import '~src/scss/variables';
+
 $small: 48em;
 $medium: 64em;
 $large: 75em;
@@ -18,4 +20,23 @@ $large: 75em;
   @media (min-width: #{$large}) {
     @content;
   }
+}
+
+@mixin navLink() {
+  color: $color-green-light;
+  text-decoration: none;
+
+  &:visited {
+    color: $color-green-light;
+  }
+  &:hover {
+    color: $color-green-dark;
+  }
+}
+
+@mixin mainContentArea() {
+  flex: 2 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
 }

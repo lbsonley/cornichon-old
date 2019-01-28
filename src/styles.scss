@@ -1,10 +1,8 @@
 @import '~src/scss/typography';
 @import '../node_modules/flexboxgrid-sass/flexboxgrid';
+@import '~src/scss/layout';
+@import '~src/scss/elements';
 
 * {
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
 }

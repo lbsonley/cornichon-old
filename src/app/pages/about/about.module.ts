@@ -4,6 +4,7 @@ import { AboutComponent } from './about.component';
 import { WhatGherkinComponent } from './what-gherkin/what-gherkin.component';
 import { MakeGherkinComponent } from './make-gherkin/make-gherkin.component';
 import { AboutRoutingModule } from './about.routing.module';
+import { ComponentsModule } from '@app/components/components.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { AboutRoutingModule } from './about.routing.module';
   ],
   imports: [
     CommonModule,
+    ComponentsModule,
     AboutRoutingModule
   ],
   exports: [
