@@ -1,0 +1,19 @@
+<ng-container *ngIf="!isMobile">
+  <a class ="nav-link nav-link-horizontal" routerLink="/about" routerLinkActive="active">
+    About
+  </a>
+  <button class="btn btn-primary">Write a Spec</button>
+</ng-container>
+<div class="mobile-menu" *ngIf="isMobile">
+  <button class="btn btn-primary" (click)="toggleMenu()">
+    <img class="menu-icon" src="assets/icons/navicon.svg"/>
+  </button>
+  <div class="menu" [class.expanded]="menuExpanded">
+    <a class="nav-link nav-link-vertical" (click)="menuExpanded = false"
+      routerLink="/about" routerLinkActive="active">
+      About
+    </a>
+    <button class="btn btn-primary" (click)="menuExpanded = false">Write a Spec</button>
+  </div>
+</div>
+<div class="menu-backdrop" (click)="menuExpanded = false" *ngIf="isMobile && menuExpanded"></div>

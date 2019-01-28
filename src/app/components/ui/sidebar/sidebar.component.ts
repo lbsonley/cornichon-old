@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DebouncedResizeService } from '@app/services/debounced-resize.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,14 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class SidebarComponent implements OnInit {
   public collapsed = false;
 
-  constructor() { }
+  constructor(private dr: DebouncedResizeService) { }
 
   ngOnInit() {
-    if (window.innerWidth < 768) {
-      console.log('is small screen');
-      this.collapsed = true;
-    }
-
+    this.collapsed = window.innerWidth < 768;
+    this.dr.getScreenWidth()
+      .subscribe((window) => {
+        this.collapsed = window.innerWidth < 768;
+      });
   }
 
   toggleCollapsed(): void {

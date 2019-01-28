@@ -9,21 +9,24 @@
 }
 
 .btn-primary {
+  color: #fff;
   border: $border-button-primary;
   background: $color-button-primary;
-  color: #fff;
 
   &:hover {
     background: $color-button-primary-hover;
+    border-color: $color-button-primary-hover;
   }
 }
 
 .btn-secondary {
+  background: #fff;
   border: $border-button-primary;
-  background: $color-button-primary;
+  color: $border-button-primary;
   
   &:hover {
-    background: $color-button-secondary-hover;
+    color: $color-button-primary-hover;
+    border-color: $color-button-primary-hover;
   }
 }
 

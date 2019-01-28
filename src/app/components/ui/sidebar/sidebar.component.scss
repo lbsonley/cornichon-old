@@ -1,26 +1,20 @@
 @import '~src/scss/mixins';
 
-.collapsed {
-  width: 48px;
-  nav{
-    .nav-link{
-      &.nav-link-vertical {
-        padding: 16px;
-      }
-    }
-  }
-}
-
 nav {
   .nav-link {
     @include navLink();
 
     &.nav-link-vertical {
-      display: block;
-      padding: 16px 32px;
+      @include navLinkVertical()
+    }
+  }
+}
 
-      &.active {
-        border-right: $border-active-link;
+.collapsed {
+  nav {
+    .nav-link {
+      &.nav-link-vertical {
+        padding: 16px;
       }
     }
   }

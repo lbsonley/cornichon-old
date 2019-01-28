@@ -1,15 +1,18 @@
-<header class="container-fluid">
+<header>
   <div class="row">
-    <div class="col-xs-4">
-      <h1 class="page-title">
-        <a routerLink="/">Cornichon</a>
-      </h1>
-    </div>
-    <nav class="col-xs-8">
-      <a class ="nav-link nav-link-horizontal" routerLink="/about" routerLinkActive="active">
-        About
+    <div class="col-xs-8 col-sm-6">
+      <a class="logo-block" routerLink="/">
+        <img class="logo" src="assets/icons/pickle.svg"/>
+        <div class="title-block">
+          <h1 class="page-title">
+            Cornichon
+          </h1>
+          <span class="tag-line">Crunchy, BDD-Style Specs</span>
+        </div>
       </a>
-      <button class="btn btn-primary">Write a Spec</button>
+    </div>
+    <nav class="col-xs-4 col-sm-6">
+      <app-menu></app-menu>
     </nav>
   </div>
 </header>

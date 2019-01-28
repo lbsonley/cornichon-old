@@ -4,11 +4,33 @@
 header {
   border-bottom: $border-default;
 
+  .logo-block {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    height: 48px;
+    width: 48px;
+    margin-right: 8px;
+  }
+
+  .title-block{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 12px;
+  }
   .page-title {
+    display: inline-block;
+    margin: 0;
     a {
       color: $color-green-light;
       text-decoration: none;
     }
+  }
+
+  .tag-line {
+    font-size: 12px;
   }
 
   nav {
@@ -16,23 +38,5 @@ header {
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: stretch;
-
-    .nav-link {
-      @include navLink();
-
-      &.nav-link-horizontal {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        padding: 0 16px;
-        margin: 0 16px;
-        border-bottom: 1px solid transparent;
-
-        &.active {
-          border-bottom: $border-active-link;
-        }
-
-      }
-    }
   }
 }

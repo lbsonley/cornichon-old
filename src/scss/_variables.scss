@@ -12,11 +12,13 @@ $color-yellow-light: lighten(#ffcc66, 10%);
 
 $color-button-primary: $color-green-light;
 $color-button-primary-hover: $color-green;
-$color-button-secondary: $color-grey-dark;
-$color-button-secondary-hover: $color-grey;
 
 // border
 $border-default: 1px solid $color-grey-light;
 $border-active-link: 2px solid $color-green-dark;
+$border-inactive-link: 2px solid transparent;
 $border-button-primary: 1px solid $color-button-primary;
-$border-button-secondary: 1px solid $color-button-secondary;
+
+// transitions
+$transition-default: all 250ms ease-out;
+$transition-slow: all 500ms ease-out;

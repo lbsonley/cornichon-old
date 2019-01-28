@@ -34,6 +34,29 @@ $large: 75em;
   }
 }
 
+@mixin navLinkHorizontal() {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 16px;
+  margin: 0 16px;
+  border-bottom: 1px solid transparent;
+
+  &.active {
+    border-bottom: $border-active-link;
+  }
+}
+
+@mixin navLinkVertical() {
+  display: block;
+  padding: 16px 32px;
+  border-right: $border-inactive-link;
+
+  &.active {
+    border-right: $border-active-link;
+  }
+}
+
 @mixin mainContentArea() {
   flex: 2 0 auto;
   display: flex;
