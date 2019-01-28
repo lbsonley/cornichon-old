@@ -1,8 +1,27 @@
-<aside class="container-content-sidebar">
+<aside class="container-content-sidebar" [class.collapsed]="collapsed">
+  <button class="btn btn-primary"
+    (click)="toggleCollapsed()">
+    <span *ngIf="collapsed">&gt;</span>
+    <span *ngIf="!collapsed">&lt;</span>
+  </button>
   <nav>
     <a class="nav-link nav-link-vertical" 
       routerLink="/about" routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }">What is a Gherkin?</a>
-    <a class="nav-link nav-link-vertical" routerLink="make-gherkin" routerLinkActive="active">Making a Gherkin</a>
+      [routerLinkActiveOptions]="{ exact: true }">
+      <span *ngIf="!collapsed">
+        What is a Gherkin?
+      </span>
+      <span *ngIf="collapsed">
+        1
+      </span>
+    </a>
+    <a class="nav-link nav-link-vertical" routerLink="make-gherkin" routerLinkActive="active">
+        <span *ngIf="!collapsed">
+          Making a Gherkin?
+        </span>
+        <span *ngIf="collapsed">
+          2
+        </span>
+    </a>
   </nav>
 </aside>

@@ -1,5 +1,16 @@
 @import '~src/scss/mixins';
 
+.collapsed {
+  width: 48px;
+  nav{
+    .nav-link{
+      &.nav-link-vertical {
+        padding: 16px;
+      }
+    }
+  }
+}
+
 nav {
   .nav-link {
     @include navLink();
