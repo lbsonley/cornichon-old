@@ -11,6 +11,11 @@ export class SidebarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    if (window.innerWidth < 768) {
+      console.log('is small screen');
+      this.collapsed = true;
+    }
+
   }
 
   toggleCollapsed(): void {
